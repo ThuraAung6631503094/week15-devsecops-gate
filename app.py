@@ -78,4 +78,4 @@ def admin():
 
 if __name__ == "__main__":
     # Port 8091 (pairs with the insecure service on 8090).
-    app.run(host="0.0.0.0", port=8091, debug=False)
+    app.run(host=os.environ.get("APP_HOST", "127.0.0.1"), port=8091, debug=False)
